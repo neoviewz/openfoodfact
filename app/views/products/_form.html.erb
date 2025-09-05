@@ -1,0 +1,742 @@
+<%= form_with(model: product) do |form| %>
+  <% if product.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+        <% product.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :code, style: "display: block" %>
+    <%= form.text_field :code %>
+  </div>
+
+  <div>
+    <%= form.label :url, style: "display: block" %>
+    <%= form.textarea :url %>
+  </div>
+
+  <div>
+    <%= form.label :creator, style: "display: block" %>
+    <%= form.text_field :creator %>
+  </div>
+
+  <div>
+    <%= form.label :created_t, style: "display: block" %>
+    <%= form.text_field :created_t %>
+  </div>
+
+  <div>
+    <%= form.label :created_datetime, style: "display: block" %>
+    <%= form.datetime_field :created_datetime %>
+  </div>
+
+  <div>
+    <%= form.label :last_modified_t, style: "display: block" %>
+    <%= form.text_field :last_modified_t %>
+  </div>
+
+  <div>
+    <%= form.label :last_modified_datetime, style: "display: block" %>
+    <%= form.datetime_field :last_modified_datetime %>
+  </div>
+
+  <div>
+    <%= form.label :product_name, style: "display: block" %>
+    <%= form.text_field :product_name %>
+  </div>
+
+  <div>
+    <%= form.label :generic_name, style: "display: block" %>
+    <%= form.text_field :generic_name %>
+  </div>
+
+  <div>
+    <%= form.label :quantity, style: "display: block" %>
+    <%= form.text_field :quantity %>
+  </div>
+
+  <div>
+    <%= form.label :packaging, style: "display: block" %>
+    <%= form.textarea :packaging %>
+  </div>
+
+  <div>
+    <%= form.label :packaging_tags, style: "display: block" %>
+    <%= form.textarea :packaging_tags %>
+  </div>
+
+  <div>
+    <%= form.label :brands, style: "display: block" %>
+    <%= form.textarea :brands %>
+  </div>
+
+  <div>
+    <%= form.label :brands_tags, style: "display: block" %>
+    <%= form.textarea :brands_tags %>
+  </div>
+
+  <div>
+    <%= form.label :categories, style: "display: block" %>
+    <%= form.textarea :categories %>
+  </div>
+
+  <div>
+    <%= form.label :categories_tags, style: "display: block" %>
+    <%= form.textarea :categories_tags %>
+  </div>
+
+  <div>
+    <%= form.label :categories_fr, style: "display: block" %>
+    <%= form.textarea :categories_fr %>
+  </div>
+
+  <div>
+    <%= form.label :origins, style: "display: block" %>
+    <%= form.textarea :origins %>
+  </div>
+
+  <div>
+    <%= form.label :origins_tags, style: "display: block" %>
+    <%= form.textarea :origins_tags %>
+  </div>
+
+  <div>
+    <%= form.label :manufacturing_places, style: "display: block" %>
+    <%= form.textarea :manufacturing_places %>
+  </div>
+
+  <div>
+    <%= form.label :manufacturing_places_tags, style: "display: block" %>
+    <%= form.textarea :manufacturing_places_tags %>
+  </div>
+
+  <div>
+    <%= form.label :labels, style: "display: block" %>
+    <%= form.textarea :labels %>
+  </div>
+
+  <div>
+    <%= form.label :labels_tags, style: "display: block" %>
+    <%= form.textarea :labels_tags %>
+  </div>
+
+  <div>
+    <%= form.label :labels_fr, style: "display: block" %>
+    <%= form.textarea :labels_fr %>
+  </div>
+
+  <div>
+    <%= form.label :emb_codes, style: "display: block" %>
+    <%= form.textarea :emb_codes %>
+  </div>
+
+  <div>
+    <%= form.label :emb_codes_tags, style: "display: block" %>
+    <%= form.textarea :emb_codes_tags %>
+  </div>
+
+  <div>
+    <%= form.label :first_packaging_code_geo, style: "display: block" %>
+    <%= form.text_field :first_packaging_code_geo %>
+  </div>
+
+  <div>
+    <%= form.label :cities, style: "display: block" %>
+    <%= form.textarea :cities %>
+  </div>
+
+  <div>
+    <%= form.label :cities_tags, style: "display: block" %>
+    <%= form.textarea :cities_tags %>
+  </div>
+
+  <div>
+    <%= form.label :purchase_places, style: "display: block" %>
+    <%= form.textarea :purchase_places %>
+  </div>
+
+  <div>
+    <%= form.label :stores, style: "display: block" %>
+    <%= form.textarea :stores %>
+  </div>
+
+  <div>
+    <%= form.label :countries, style: "display: block" %>
+    <%= form.textarea :countries %>
+  </div>
+
+  <div>
+    <%= form.label :countries_tags, style: "display: block" %>
+    <%= form.textarea :countries_tags %>
+  </div>
+
+  <div>
+    <%= form.label :countries_fr, style: "display: block" %>
+    <%= form.textarea :countries_fr %>
+  </div>
+
+  <div>
+    <%= form.label :ingredients_text, style: "display: block" %>
+    <%= form.textarea :ingredients_text %>
+  </div>
+
+  <div>
+    <%= form.label :traces, style: "display: block" %>
+    <%= form.textarea :traces %>
+  </div>
+
+  <div>
+    <%= form.label :traces_tags, style: "display: block" %>
+    <%= form.textarea :traces_tags %>
+  </div>
+
+  <div>
+    <%= form.label :serving_size, style: "display: block" %>
+    <%= form.text_field :serving_size %>
+  </div>
+
+  <div>
+    <%= form.label :no_nutriments, style: "display: block" %>
+    <%= form.text_field :no_nutriments %>
+  </div>
+
+  <div>
+    <%= form.label :additives_n, style: "display: block" %>
+    <%= form.number_field :additives_n %>
+  </div>
+
+  <div>
+    <%= form.label :additives, style: "display: block" %>
+    <%= form.textarea :additives %>
+  </div>
+
+  <div>
+    <%= form.label :additives_tags, style: "display: block" %>
+    <%= form.textarea :additives_tags %>
+  </div>
+
+  <div>
+    <%= form.label :ingredients_from_palm_oil_n, style: "display: block" %>
+    <%= form.number_field :ingredients_from_palm_oil_n %>
+  </div>
+
+  <div>
+    <%= form.label :ingredients_from_palm_oil, style: "display: block" %>
+    <%= form.textarea :ingredients_from_palm_oil %>
+  </div>
+
+  <div>
+    <%= form.label :ingredients_from_palm_oil_tags, style: "display: block" %>
+    <%= form.textarea :ingredients_from_palm_oil_tags %>
+  </div>
+
+  <div>
+    <%= form.label :ingredients_that_may_be_from_palm_oil_n, style: "display: block" %>
+    <%= form.number_field :ingredients_that_may_be_from_palm_oil_n %>
+  </div>
+
+  <div>
+    <%= form.label :ingredients_that_may_be_from_palm_oil, style: "display: block" %>
+    <%= form.textarea :ingredients_that_may_be_from_palm_oil %>
+  </div>
+
+  <div>
+    <%= form.label :ingredients_that_may_be_from_palm_oil_tags, style: "display: block" %>
+    <%= form.textarea :ingredients_that_may_be_from_palm_oil_tags %>
+  </div>
+
+  <div>
+    <%= form.label :nutrition_grade_fr, style: "display: block" %>
+    <%= form.text_field :nutrition_grade_fr %>
+  </div>
+
+  <div>
+    <%= form.label :main_category, style: "display: block" %>
+    <%= form.text_field :main_category %>
+  </div>
+
+  <div>
+    <%= form.label :main_category_fr, style: "display: block" %>
+    <%= form.text_field :main_category_fr %>
+  </div>
+
+  <div>
+    <%= form.label :image_url, style: "display: block" %>
+    <%= form.textarea :image_url %>
+  </div>
+
+  <div>
+    <%= form.label :image_small_url, style: "display: block" %>
+    <%= form.textarea :image_small_url %>
+  </div>
+
+  <div>
+    <%= form.label :energy_100g, style: "display: block" %>
+    <%= form.text_field :energy_100g %>
+  </div>
+
+  <div>
+    <%= form.label :energy_kj_100g, style: "display: block" %>
+    <%= form.text_field :energy_kj_100g %>
+  </div>
+
+  <div>
+    <%= form.label :energy_kcal_100g, style: "display: block" %>
+    <%= form.text_field :energy_kcal_100g %>
+  </div>
+
+  <div>
+    <%= form.label :proteins_100g, style: "display: block" %>
+    <%= form.text_field :proteins_100g %>
+  </div>
+
+  <div>
+    <%= form.label :casein_100g, style: "display: block" %>
+    <%= form.text_field :casein_100g %>
+  </div>
+
+  <div>
+    <%= form.label :serum_proteins_100g, style: "display: block" %>
+    <%= form.text_field :serum_proteins_100g %>
+  </div>
+
+  <div>
+    <%= form.label :nucleotides_100g, style: "display: block" %>
+    <%= form.text_field :nucleotides_100g %>
+  </div>
+
+  <div>
+    <%= form.label :carbohydrates_100g, style: "display: block" %>
+    <%= form.text_field :carbohydrates_100g %>
+  </div>
+
+  <div>
+    <%= form.label :sugars_100g, style: "display: block" %>
+    <%= form.text_field :sugars_100g %>
+  </div>
+
+  <div>
+    <%= form.label :sucrose_100g, style: "display: block" %>
+    <%= form.text_field :sucrose_100g %>
+  </div>
+
+  <div>
+    <%= form.label :glucose_100g, style: "display: block" %>
+    <%= form.text_field :glucose_100g %>
+  </div>
+
+  <div>
+    <%= form.label :fructose_100g, style: "display: block" %>
+    <%= form.text_field :fructose_100g %>
+  </div>
+
+  <div>
+    <%= form.label :lactose_100g, style: "display: block" %>
+    <%= form.text_field :lactose_100g %>
+  </div>
+
+  <div>
+    <%= form.label :maltose_100g, style: "display: block" %>
+    <%= form.text_field :maltose_100g %>
+  </div>
+
+  <div>
+    <%= form.label :maltodextrins_100g, style: "display: block" %>
+    <%= form.text_field :maltodextrins_100g %>
+  </div>
+
+  <div>
+    <%= form.label :starch_100g, style: "display: block" %>
+    <%= form.text_field :starch_100g %>
+  </div>
+
+  <div>
+    <%= form.label :polyols_100g, style: "display: block" %>
+    <%= form.text_field :polyols_100g %>
+  </div>
+
+  <div>
+    <%= form.label :fat_100g, style: "display: block" %>
+    <%= form.text_field :fat_100g %>
+  </div>
+
+  <div>
+    <%= form.label :saturated_fat_100g, style: "display: block" %>
+    <%= form.text_field :saturated_fat_100g %>
+  </div>
+
+  <div>
+    <%= form.label :butyric_acid_100g, style: "display: block" %>
+    <%= form.text_field :butyric_acid_100g %>
+  </div>
+
+  <div>
+    <%= form.label :caproic_acid_100g, style: "display: block" %>
+    <%= form.text_field :caproic_acid_100g %>
+  </div>
+
+  <div>
+    <%= form.label :caprylic_acid_100g, style: "display: block" %>
+    <%= form.text_field :caprylic_acid_100g %>
+  </div>
+
+  <div>
+    <%= form.label :capric_acid_100g, style: "display: block" %>
+    <%= form.text_field :capric_acid_100g %>
+  </div>
+
+  <div>
+    <%= form.label :lauric_acid_100g, style: "display: block" %>
+    <%= form.text_field :lauric_acid_100g %>
+  </div>
+
+  <div>
+    <%= form.label :myristic_acid_100g, style: "display: block" %>
+    <%= form.text_field :myristic_acid_100g %>
+  </div>
+
+  <div>
+    <%= form.label :palmitic_acid_100g, style: "display: block" %>
+    <%= form.text_field :palmitic_acid_100g %>
+  </div>
+
+  <div>
+    <%= form.label :stearic_acid_100g, style: "display: block" %>
+    <%= form.text_field :stearic_acid_100g %>
+  </div>
+
+  <div>
+    <%= form.label :arachidic_acid_100g, style: "display: block" %>
+    <%= form.text_field :arachidic_acid_100g %>
+  </div>
+
+  <div>
+    <%= form.label :behenic_acid_100g, style: "display: block" %>
+    <%= form.text_field :behenic_acid_100g %>
+  </div>
+
+  <div>
+    <%= form.label :lignoceric_acid_100g, style: "display: block" %>
+    <%= form.text_field :lignoceric_acid_100g %>
+  </div>
+
+  <div>
+    <%= form.label :cerotic_acid_100g, style: "display: block" %>
+    <%= form.text_field :cerotic_acid_100g %>
+  </div>
+
+  <div>
+    <%= form.label :montanic_acid_100g, style: "display: block" %>
+    <%= form.text_field :montanic_acid_100g %>
+  </div>
+
+  <div>
+    <%= form.label :melissic_acid_100g, style: "display: block" %>
+    <%= form.text_field :melissic_acid_100g %>
+  </div>
+
+  <div>
+    <%= form.label :monounsaturated_fat_100g, style: "display: block" %>
+    <%= form.text_field :monounsaturated_fat_100g %>
+  </div>
+
+  <div>
+    <%= form.label :polyunsaturated_fat_100g, style: "display: block" %>
+    <%= form.text_field :polyunsaturated_fat_100g %>
+  </div>
+
+  <div>
+    <%= form.label :omega_3_fat_100g, style: "display: block" %>
+    <%= form.text_field :omega_3_fat_100g %>
+  </div>
+
+  <div>
+    <%= form.label :alpha_linolenic_acid_100g, style: "display: block" %>
+    <%= form.text_field :alpha_linolenic_acid_100g %>
+  </div>
+
+  <div>
+    <%= form.label :eicosapentaenoic_acid_100g, style: "display: block" %>
+    <%= form.text_field :eicosapentaenoic_acid_100g %>
+  </div>
+
+  <div>
+    <%= form.label :docosahexaenoic_acid_100g, style: "display: block" %>
+    <%= form.text_field :docosahexaenoic_acid_100g %>
+  </div>
+
+  <div>
+    <%= form.label :omega_6_fat_100g, style: "display: block" %>
+    <%= form.text_field :omega_6_fat_100g %>
+  </div>
+
+  <div>
+    <%= form.label :linoleic_acid_100g, style: "display: block" %>
+    <%= form.text_field :linoleic_acid_100g %>
+  </div>
+
+  <div>
+    <%= form.label :arachidonic_acid_100g, style: "display: block" %>
+    <%= form.text_field :arachidonic_acid_100g %>
+  </div>
+
+  <div>
+    <%= form.label :gamma_linolenic_acid_100g, style: "display: block" %>
+    <%= form.text_field :gamma_linolenic_acid_100g %>
+  </div>
+
+  <div>
+    <%= form.label :dihomo_gamma_linolenic_acid_100g, style: "display: block" %>
+    <%= form.text_field :dihomo_gamma_linolenic_acid_100g %>
+  </div>
+
+  <div>
+    <%= form.label :omega_9_fat_100g, style: "display: block" %>
+    <%= form.text_field :omega_9_fat_100g %>
+  </div>
+
+  <div>
+    <%= form.label :oleic_acid_100g, style: "display: block" %>
+    <%= form.text_field :oleic_acid_100g %>
+  </div>
+
+  <div>
+    <%= form.label :elaidic_acid_100g, style: "display: block" %>
+    <%= form.text_field :elaidic_acid_100g %>
+  </div>
+
+  <div>
+    <%= form.label :gondoic_acid_100g, style: "display: block" %>
+    <%= form.text_field :gondoic_acid_100g %>
+  </div>
+
+  <div>
+    <%= form.label :mead_acid_100g, style: "display: block" %>
+    <%= form.text_field :mead_acid_100g %>
+  </div>
+
+  <div>
+    <%= form.label :erucic_acid_100g, style: "display: block" %>
+    <%= form.text_field :erucic_acid_100g %>
+  </div>
+
+  <div>
+    <%= form.label :nervonic_acid_100g, style: "display: block" %>
+    <%= form.text_field :nervonic_acid_100g %>
+  </div>
+
+  <div>
+    <%= form.label :trans_fat_100g, style: "display: block" %>
+    <%= form.text_field :trans_fat_100g %>
+  </div>
+
+  <div>
+    <%= form.label :cholesterol_100g, style: "display: block" %>
+    <%= form.text_field :cholesterol_100g %>
+  </div>
+
+  <div>
+    <%= form.label :fiber_100g, style: "display: block" %>
+    <%= form.text_field :fiber_100g %>
+  </div>
+
+  <div>
+    <%= form.label :sodium_100g, style: "display: block" %>
+    <%= form.text_field :sodium_100g %>
+  </div>
+
+  <div>
+    <%= form.label :alcohol_100g, style: "display: block" %>
+    <%= form.text_field :alcohol_100g %>
+  </div>
+
+  <div>
+    <%= form.label :vitamin_a_100g, style: "display: block" %>
+    <%= form.text_field :vitamin_a_100g %>
+  </div>
+
+  <div>
+    <%= form.label :vitamin_d_100g, style: "display: block" %>
+    <%= form.text_field :vitamin_d_100g %>
+  </div>
+
+  <div>
+    <%= form.label :vitamin_e_100g, style: "display: block" %>
+    <%= form.text_field :vitamin_e_100g %>
+  </div>
+
+  <div>
+    <%= form.label :vitamin_k_100g, style: "display: block" %>
+    <%= form.text_field :vitamin_k_100g %>
+  </div>
+
+  <div>
+    <%= form.label :vitamin_c_100g, style: "display: block" %>
+    <%= form.text_field :vitamin_c_100g %>
+  </div>
+
+  <div>
+    <%= form.label :vitamin_b1_100g, style: "display: block" %>
+    <%= form.text_field :vitamin_b1_100g %>
+  </div>
+
+  <div>
+    <%= form.label :vitamin_b2_100g, style: "display: block" %>
+    <%= form.text_field :vitamin_b2_100g %>
+  </div>
+
+  <div>
+    <%= form.label :vitamin_pp_100g, style: "display: block" %>
+    <%= form.text_field :vitamin_pp_100g %>
+  </div>
+
+  <div>
+    <%= form.label :vitamin_b6_100g, style: "display: block" %>
+    <%= form.text_field :vitamin_b6_100g %>
+  </div>
+
+  <div>
+    <%= form.label :vitamin_b9_100g, style: "display: block" %>
+    <%= form.text_field :vitamin_b9_100g %>
+  </div>
+
+  <div>
+    <%= form.label :vitamin_b12_100g, style: "display: block" %>
+    <%= form.text_field :vitamin_b12_100g %>
+  </div>
+
+  <div>
+    <%= form.label :biotin_100g, style: "display: block" %>
+    <%= form.text_field :biotin_100g %>
+  </div>
+
+  <div>
+    <%= form.label :pantothenic_acid_100g, style: "display: block" %>
+    <%= form.text_field :pantothenic_acid_100g %>
+  </div>
+
+  <div>
+    <%= form.label :silica_100g, style: "display: block" %>
+    <%= form.text_field :silica_100g %>
+  </div>
+
+  <div>
+    <%= form.label :bicarbonate_100g, style: "display: block" %>
+    <%= form.text_field :bicarbonate_100g %>
+  </div>
+
+  <div>
+    <%= form.label :potassium_100g, style: "display: block" %>
+    <%= form.text_field :potassium_100g %>
+  </div>
+
+  <div>
+    <%= form.label :chloride_100g, style: "display: block" %>
+    <%= form.text_field :chloride_100g %>
+  </div>
+
+  <div>
+    <%= form.label :calcium_100g, style: "display: block" %>
+    <%= form.text_field :calcium_100g %>
+  </div>
+
+  <div>
+    <%= form.label :phosphorus_100g, style: "display: block" %>
+    <%= form.text_field :phosphorus_100g %>
+  </div>
+
+  <div>
+    <%= form.label :iron_100g, style: "display: block" %>
+    <%= form.text_field :iron_100g %>
+  </div>
+
+  <div>
+    <%= form.label :magnesium_100g, style: "display: block" %>
+    <%= form.text_field :magnesium_100g %>
+  </div>
+
+  <div>
+    <%= form.label :zinc_100g, style: "display: block" %>
+    <%= form.text_field :zinc_100g %>
+  </div>
+
+  <div>
+    <%= form.label :copper_100g, style: "display: block" %>
+    <%= form.text_field :copper_100g %>
+  </div>
+
+  <div>
+    <%= form.label :manganese_100g, style: "display: block" %>
+    <%= form.text_field :manganese_100g %>
+  </div>
+
+  <div>
+    <%= form.label :fluoride_100g, style: "display: block" %>
+    <%= form.text_field :fluoride_100g %>
+  </div>
+
+  <div>
+    <%= form.label :selenium_100g, style: "display: block" %>
+    <%= form.text_field :selenium_100g %>
+  </div>
+
+  <div>
+    <%= form.label :chromium_100g, style: "display: block" %>
+    <%= form.text_field :chromium_100g %>
+  </div>
+
+  <div>
+    <%= form.label :molybdenum_100g, style: "display: block" %>
+    <%= form.text_field :molybdenum_100g %>
+  </div>
+
+  <div>
+    <%= form.label :iodine_100g, style: "display: block" %>
+    <%= form.text_field :iodine_100g %>
+  </div>
+
+  <div>
+    <%= form.label :caffeine_100g, style: "display: block" %>
+    <%= form.text_field :caffeine_100g %>
+  </div>
+
+  <div>
+    <%= form.label :taurine_100g, style: "display: block" %>
+    <%= form.text_field :taurine_100g %>
+  </div>
+
+  <div>
+    <%= form.label :ph_100g, style: "display: block" %>
+    <%= form.text_field :ph_100g %>
+  </div>
+
+  <div>
+    <%= form.label :fruits_vegetables_nuts_100g, style: "display: block" %>
+    <%= form.text_field :fruits_vegetables_nuts_100g %>
+  </div>
+
+  <div>
+    <%= form.label :carbon_footprint_100g, style: "display: block" %>
+    <%= form.text_field :carbon_footprint_100g %>
+  </div>
+
+  <div>
+    <%= form.label :nutrition_score_fr_100g, style: "display: block" %>
+    <%= form.text_field :nutrition_score_fr_100g %>
+  </div>
+
+  <div>
+    <%= form.label :nutrition_score_uk_100g, style: "display: block" %>
+    <%= form.text_field :nutrition_score_uk_100g %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
